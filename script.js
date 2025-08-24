@@ -1,5 +1,7 @@
 // Three.js animated background
 let scene, camera, renderer, particles;
+let mouseX = 0, mouseY = 0;
+let targetRotationX = 0, targetRotationY = 0;
 
 function initBackground() {
     scene = new THREE.Scene();
@@ -43,13 +45,26 @@ function initBackground() {
 function animate() {
     requestAnimationFrame(animate);
 
-    // Rotate particles
-    particles.rotation.x += 0.0005;
-    particles.rotation.y += 0.0008;
+    // Base continuous rotation (when mouse is in center)
+    const baseRotationX = 0.0005;
+    const baseRotationY = 0.0008;
+
+    // Mouse influence - center is neutral, sides speed up in opposite directions
+    const mouseInfluenceX = mouseY * 0.001;  // Up/down still works the same
+    const mouseInfluenceY = mouseX * 0.002;  // Left/right: negative on left, positive on right
+    
+    // Apply rotation: base + mouse influence
+    particles.rotation.x += baseRotationX + mouseInfluenceX;
+    particles.rotation.y += baseRotationY + mouseInfluenceY;
 
     // Pulse effect
     const time = Date.now() * 0.001;
     particles.material.opacity = 0.3 + Math.sin(time) * 0.1;
+
+    // Subtle camera movement based on mouse - increased effect
+    camera.position.x += (mouseX * 0.02 - camera.position.x) * 0.05;
+    camera.position.y += (-mouseY * 0.02 - camera.position.y) * 0.05;
+    camera.lookAt(scene.position);
 
     renderer.render(scene, camera);
 }
@@ -59,6 +74,20 @@ window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// Mouse movement tracking
+window.addEventListener('mousemove', (event) => {
+    mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+    mouseY = (event.clientY / window.innerHeight) * 2 - 1;
+});
+
+// Touch movement tracking for mobile
+window.addEventListener('touchmove', (event) => {
+    if (event.touches.length > 0) {
+        mouseX = (event.touches[0].clientX / window.innerWidth) * 2 - 1;
+        mouseY = (event.touches[0].clientY / window.innerHeight) * 2 - 1;
+    }
 });
 
 // Fade in animations
