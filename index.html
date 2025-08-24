@@ -3,175 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yeeth.xyz - GitHub Pages Test</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 600px;
-            margin: 2rem;
-        }
-
-        h1 {
-            color: #667eea;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .status {
-            background: #e8f5e8;
-            color: #2d6e2d;
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            border-left: 4px solid #4caf50;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .info-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border: 1px solid #e9ecef;
-        }
-
-        .info-card h3 {
-            color: #495057;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .info-card p {
-            color: #6c757d;
-            font-size: 0.9rem;
-        }
-
-        .timestamp {
-            color: #888;
-            font-size: 0.9rem;
-            margin-top: 2rem;
-            font-style: italic;
-        }
-
-        .github-link {
-            display: inline-block;
-            background: #24292e;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 1rem;
-            transition: background 0.3s ease;
-        }
-
-        .github-link:hover {
-            background: #444d56;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                margin: 1rem;
-                padding: 2rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Yeeth Security - Developer Security Solutions</title>
+    <link rel="icon" type="image/svg+xml" href="yeeth-icon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>🚀 Yeeth.xyz</h1>
-        <p class="subtitle">GitHub Pages Test Site</p>
-        
-        <div class="status">
-            ✅ GitHub Pages is working correctly!
+    <canvas id="bg-canvas"></canvas>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="yeeth-icon.svg" alt="Yeeth Security">
+                Yeeth Security
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        
-        <div class="info-grid">
-            <div class="info-card">
-                <h3>📦 Repository</h3>
-                <p>yeeth-security/yeeth.xyz</p>
-            </div>
-            
-            <div class="info-card">
-                <h3>🌐 Hosting</h3>
-                <p>GitHub Pages</p>
-            </div>
-            
-            <div class="info-card">
-                <h3>📄 Page Type</h3>
-                <p>Static HTML</p>
-            </div>
-            
-            <div class="info-card">
-                <h3>🔧 Status</h3>
-                <p>Deployment Successful</p>
-            </div>
-        </div>
-        
-        <a href="https://github.com/yeeth-security/yeeth.xyz" class="github-link" target="_blank">
-            View on GitHub
-        </a>
-        
-        <div class="timestamp">
-            Last updated: <span id="timestamp"></span>
-        </div>
-    </div>
+    </nav>
 
-    <script>
-        // Display current timestamp
-        document.getElementById('timestamp').textContent = new Date().toLocaleString();
-        
-        // Add some interactive effects
-        const container = document.querySelector('.container');
-        
-        container.addEventListener('mouseenter', () => {
-            container.style.transform = 'translateY(-5px)';
-            container.style.transition = 'transform 0.3s ease';
-        });
-        
-        container.addEventListener('mouseleave', () => {
-            container.style.transform = 'translateY(0)';
-        });
-    </script>
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-badge">🛡️ Developer Security Solutions</div>
+            <h1>Yeeth Security</h1>
+            <p>Empowering developers and organizations to build and operate securely. We create innovative tools and solutions to protect your software supply chain and development environments from emerging threats.</p>
+            <div class="cta-buttons">
+                <a href="#products" class="btn-primary">Explore Our Solutions</a>
+                <a href="https://github.com/yeeth-security" class="btn-secondary" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>Advanced security tools designed for modern development workflows</p>
+            </div>
+
+            <div class="product-showcase">
+                <div class="product-header">
+                    <img src="https://raw.githubusercontent.com/bkojusner/dev-guard/main/icons/icon128.png" alt="dev-guard" class="product-icon">
+                    <div class="product-info">
+                        <h3>dev-guard</h3>
+                        <p>Extension Security Auditor for VS Code & Cursor</p>
+                    </div>
+                </div>
+                
+                <div class="product-features">
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">
+                            <strong>Automatic Scanning:</strong> Continuously monitors and scans for malicious extensions on startup and during runtime
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">
+                            <strong>Real-time Monitoring:</strong> Detects extension changes and automatically re-runs security audits
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">
+                            <strong>Threat Intelligence:</strong> Compares installed extensions against curated lists of known malicious packages
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">
+                            <strong>Detailed Reports:</strong> Provides comprehensive security reports in output channels with actionable insights
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">
+                            <strong>One-click Removal:</strong> Offers instant uninstall capabilities for detected malicious extensions
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">
+                            <strong>Seamless Integration:</strong> Works natively with both VS Code and Cursor extension ecosystems
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://github.com/bkojusner/dev-guard" class="btn-primary" target="_blank">
+                        Learn More About dev-guard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/yeeth-security" target="_blank">GitHub</a>
+                <a href="https://github.com/bkojusner/dev-guard" target="_blank">dev-guard</a>
+                <a href="mailto:contact@yeeth.xyz">Contact</a>
+            </div>
+            <p>&copy; 2025 Yeeth Security. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
