@@ -21,7 +21,7 @@
         },
         "repositoryUrl": {
           "url": "https://github.com/yeeth-security/dev-guard",
-          "wellKnown": "https://github.com/yeeth-security/dev-guard/.well-known/funding-manifest-urls"
+          "wellKnown": "https://github.com/yeeth-security/dev-guard/blob/main/.well-known/funding-manifest-urls"
         },
         "licenses": [
           "spdx:AGPL-3.0"
