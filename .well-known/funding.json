@@ -1,0 +1,85 @@
+{
+    "version": "v1.0.0",
+    "entity": {
+      "type": "group",
+      "role": "maintainer",
+      "name": "Yeeth Security",
+      "email": "team@kosec.io",
+      "phone": "",
+      "description": "Maintainer of DevGuard, an open-source security extension designed to protect Cursor developers from malicious extensions. The goal is to make the Cursor ecosystem safer by providing automated scans, real-time monitoring, and one-click protection against malicious extensions.",
+      "webpageUrl": {
+        "url": "https://yeeth.xyz/"
+      }
+    },
+    "projects": [
+      {
+        "guid": "dev-guard",
+        "name": "DevGuard",
+        "description": "DevGuard is a security-focused Cursor extension that automatically scans, monitors, and protects developers from malicious extensions. It compares installed extensions against a known malicious list, provides real-time auditing, and one-click uninstall for flagged extensions. Its mission is to give developers peace of mind while coding by keeping their environment safe.",
+        "webpageUrl": {
+          "url": "https://yeeth.xyz/"
+        },
+        "repositoryUrl": {
+          "url": "https://github.com/yeeth-security/dev-guard",
+          "wellKnown": "https://github.com/yeeth-security/dev-guard/.well-known/funding-manifest-urls"
+        },
+        "licenses": [
+          "spdx:AGPL-3.0"
+        ],
+        "tags": [
+          "security",
+          "developer-tools",
+          "cursor",
+          "extensions",
+          "malware-protection",
+          "open-source"
+        ]
+      }
+    ],
+    "funding": {
+      "channels": [
+        {
+          "guid": "yeethbank",
+          "type": "bank",
+          "address": "",
+          "description": "Support DevGuard securely through online banking."
+        }
+      ],
+      "plans": [
+        {
+          "guid": "sustain-devguard",
+          "status": "active",
+          "name": "Support DevGuard Development",
+          "description": "Help sustain infrastructure and active development for continuous security updates to keep developers safe from malicious extensions.",
+          "amount": 0,
+          "currency": "USD",
+          "frequency": "monthly",
+          "channels": [
+            "yeethbank"
+          ]
+        },
+        {
+          "guid": "one-time-donation",
+          "status": "active",
+          "name": "One-Time Donation",
+          "description": "Contribute any amount to support the project and its mission.",
+          "amount": 0,
+          "currency": "USD",
+          "frequency": "one-time",
+          "channels": [
+            "yeethbank"
+          ]
+        }
+      ],
+      "history": [
+        {
+          "year": 2025,
+          "income": 0,
+          "expenses": 0,
+          "taxes": 0,
+          "currency": "USD",
+          "description": ""
+        }
+      ]
+    }
+  }
